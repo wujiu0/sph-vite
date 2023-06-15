@@ -1,10 +1,22 @@
-import mockRequest from '@/api/mockRequest';
-import requests from '@/api/request';
+import mockRequests from '@/api/mockRequests';
+import requests from '@/api/requests';
 
-export const reqCategoryList = () => {
+/**
+ * 获取菜单导航项列表
+ * @returns {Promise<axios.AxiosResponse<any>>}
+ */
+export const reqGetCategoryList = () => {
     return requests.get('/product/getBaseCategoryList');
 };
 
+/**
+ * 获取首页轮播图列表
+ * @returns {Promise<axios.AxiosResponse<any>>}
+ */
 export const reqGetBannerList = () => {
-    return mockRequest.get('/banner');
+    return mockRequests.get('/banner');
+};
+
+export const reqGetFloorList = () => {
+    return mockRequests.get('/floor');
 };
